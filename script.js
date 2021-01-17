@@ -3,7 +3,7 @@
  * DONE: Get user value from input and save it to variable numberGuess
  * DONE: Generate a random number 1 to 100 and save it to variable correctNumber
  * DONE: Console whether the guess is too high, too low, or is correct inside playGame function
- * TODO: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
+ * DONE: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
  * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
@@ -28,15 +28,7 @@ window.onload = function() {
 function playGame(){
   // *CODE GOES BELOW HERE *
   let numberGuess = document.getElementById('number-guess').value;
-  console.log(correctNumber)
-  if (numberGuess > correctNumber){
-    console.log("Too high");
-  } else if (numberGuess < correctNumber){
-    console.log("Too low");
-  } else{
-    console.log("is correct");
-  }
-  console.log(numberGuess);
+  displayResult(numberGuess);
 }
 
 /**``
@@ -44,7 +36,15 @@ function playGame(){
  * HINT: Use if, else if, else statement 
  */
 // *CODE GOES BELOW HERE *
-
+function displayResult(numberGuess){
+  if (numberGuess > correctNumber){
+    console.log("Too high");
+  } else if (numberGuess < correctNumber){
+    console.log("Too low");
+  } else if(numberGuess == correctNumber){
+    console.log("is correct");
+  }
+}
 
 
 /**
