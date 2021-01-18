@@ -38,11 +38,11 @@ function playGame(){
 // *CODE GOES BELOW HERE *
 function displayResult(numberGuess){
   if (numberGuess > correctNumber){
-    console.log("Too high");
+    showNumberAbove();
   } else if (numberGuess < correctNumber){
-    console.log("Too low");
+    showNumberBelow();
   } else if(numberGuess == correctNumber){
-    console.log("is correct");
+    showYouWon();
   }
 }
 
@@ -94,7 +94,7 @@ function displayHistory() {
   let index; // TODO
   let list = "<ul class='list-group'>";
   // *CODE GOES BELOW HERE *
-  list += '</ul>'
+  list += '</ul>';
   document.getElementById("history").innerHTML = list;
 }
 
@@ -126,7 +126,7 @@ function showYouWon(){
    * HINT: Use the 'won' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-  let dialog = getDialog('Won', text);
+  let dialog = getDialog('won', text);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -138,7 +138,7 @@ function showNumberAbove(){
    * HINT: Use the 'warning' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-  let dialog = getDialog('Warning', text);
+  let dialog = getDialog('warning', text);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -150,6 +150,6 @@ function showNumberBelow(){
    * HINT: Use the 'warning' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-  let dialog = getDialog('Warning', text)
+  let dialog = getDialog('warning', text)
   document.getElementById("result").innerHTML = dialog;
 }
